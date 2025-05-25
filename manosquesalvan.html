@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manos que Salvan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- LOGO FIJO -->
+  <header>
+    <img src="Logo de _Manos que Salvan_.png" alt="Logo Manos que Salvan">
+  </header>
+
+  <!-- PORTADA CON FONDO DIFUMINADO -->
+  <div class="hero-bg-manos"></div>
+  <div class="hero-content">
+    <h1>Bienvenidos a Manos que Salvan</h1>
+    <a href="#contenido">Saber más</a>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main id="contenido">
+    <section class="info-empresa">
+      <h2>¿Quiénes somos?</h2>
+      <p>Manos que Salvan nace con el propósito de educar, concientizar y empoderar a las personas en el conocimiento y la práctica de técnicas de RCP (Reanimación Cardiopulmonar), primeros auxilios y uso de DEA (Desfibrilador Externo Automático)</p>
+      <p>Nuestra misión es brindar capacitaciones dinámicas y accesibles para que cualquier persona pueda convertirse en un eslabón clave en la cadena de supervivencia.</p>
+      <p>Creemos que, con la preparación adecuada, cada mano puede ser la diferencia entre la vida y la muerte. A través de cursos prácticos, charlas y actividades de concientización, trabajamos día a día para construir una comunidad más segura, preparada y comprometida con salvar vidas.</p>
+    </section>
+
+    <section class="presentacion">
+      <div class="presentacion-container">
+    
+        <!-- Contenedor de la foto + redes -->
+        <div class="foto-ernesto-container">
+          <img src="ernesto.jpeg" alt="Ernesto Álvarez Fajardo" class="foto-ernesto">
+    
+          <div class="redes-ernesto">
+            <a href="https://wa.me/59892253104" target="_blank">
+              <img src="logowpp.png" alt="WhatsApp Ernesto">
+            </a>
+            <a href="https://www.instagram.com/ernestoalvarezfajardo/?hl=es-la" target="_blank">
+              <img src="igrojo.png" alt="Instagram Ernesto">
+            </a>
+            <a href="https://www.linkedin.com/in/ernesto-alvarez-fajardo-4190a9106/" target="_blank">
+              <img src="linkedinrojo.png" alt="LinkedIn Ernesto">
+            </a>
+          </div>
+        </div>
+    
+        <!-- Contenedor del texto -->
+        <div class="info-ernesto">
+          <h1>Ernesto Álvarez Fajardo</h1>
+          <p><strong>Instructor de Primeros Auxilios</strong>, Ingeniero Tecnólogo Prevencionista, Gerente de Seguridad y Mantenimiento en The Grand Hotel y Fundador de RiesgoCeroUy.</p>
+          <br>
+          <p>Con más de <strong>5 años de experiencia</strong> en el rubro de la capacitacion y formación de personal, Ernesto ha capacitado a +2000 personas en técnicas de RCP y primeros auxilios.</p>
+          <br>
+          <p><strong>Manos que Salvan</strong> es una empresa fundada junto a mi hijo para concientizar sobre la importancia de estar preparados ante emergencias. A través de ejemplos 
+            cotidianos, buscamos mostrar que un paro cardiorrespiratorio puede ocurrir en cualquier momento, y que actuar a tiempo puede salvar vidas. 
+            Nuestro objetivo es acercar el conocimiento de RCP a la mayor cantidad de personas posible, construyendo así un Uruguay más seguro y libre de muertes evitables.</p>
+        </div>
+    
+      </div>
+    </section>
+    
+
+    <section class="casos-exito">
+      <h2>Nuestro Recorrido</h2>
+    
+      <div class="galeria destacados">
+        <div class="caso destacado">
+          <p><strong>+30 Empresas Capacitadas</strong><br></p>
+        </div>
+        <div class="caso destacado">
+          <p><strong>+5 Años</strong><br>Capacitando Empresas</p>
+        </div>
+        <div class="caso destacado">
+          <p><strong>+2000 personas</strong><br>Capacitadas para actuar ante Emergencias.</p>
+        </div>
+      </div>
+    
+      <h2 style="margin-top: 60px;">Empresas más destacadas</h2>
+    
+      <div class="galeria">
+        <div class="caso">
+          <img src="hotel1.jpg" alt="The Grand Hotel">
+          <p><strong>The Grand Hotel</strong><br>Capacitación completa a más de 170 empleados en uno de los hoteles mas prestigiosos.</p>
+        </div>
+        <div class="caso">
+          <img src="bahia.jpg" alt="Bahía Vik">
+          <p><strong>Bahía Vik</strong><br>Entrenamiento a todo el personal preparado para cada emergencia.</p>
+        </div>
+        <div class="caso">
+          <img src="escuela.jpeg" alt="Escuela N7">
+          <p><strong>Escuela N7</strong><br>Capacitación de maestras y personal en técnicas de emergencia y RCP.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="contacto" id="contacto">
+      <h2>¡Contactanos!</h2>
+    
+      <form action="https://formspree.io/f/xblolkve" method="POST" id="formulario-contacto">
+        <div class="campo">
+          <input type="text" name="nombre" placeholder="Nombre completo" required>
+        </div>
+        <div class="campo">
+          <input type="email" name="email" placeholder="Correo electrónico" required>
+        </div>
+        <div class="campo">
+          <input type="tel" name="telefono" placeholder="Teléfono" required>
+        </div>
+        <div class="campo">
+          <textarea name="mensaje" placeholder="Escribí tu mensaje" required></textarea>
+        </div>
+        <button type="submit" class="btn-enviar">Enviar mensaje</button>
+      </form>
+    
+      <div id="mensaje-exito" class="mensaje-oculto">
+        ¡Animate a salvar vidas! 
+      </div>
+    
+      <div class="redes">
+        <a href="https://wa.me/59891511615" target="_blank">
+          <img src="logowpp.png" alt="WhatsApp">
+        </a>
+        <a href="https://instagram.com/tuusuario" target="_blank">
+          <img src="igrojo.png" alt="Instagram">
+        </a>
+        <a href="https://linkedin.com/in/tuusuario" target="_blank">
+          <img src="linkedinrojo.png" alt="LinkedIn">
+        </a>
+      </div>
+    </section>
+
+    <script>
+      const form = document.getElementById('formulario-contacto');
+      const mensajeExito = document.getElementById('mensaje-exito');
+    
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita envío instantáneo
+        mensajeExito.style.display = 'block'; // Muestra el mensaje
+        setTimeout(() => {
+          form.submit(); // Después de 2 segundos, envía
+        }, 2000);
+      });
+    </script>
+    

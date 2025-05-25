@@ -1,0 +1,597 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  background-color: #000;
+  scroll-behavior: smooth;
+}
+
+/* HEADER - Logo fijo */
+header {
+  position: fixed;
+  top: 20px;
+  left: 45px;
+  z-index: 1000;
+  background: none;
+  box-shadow: none;
+}
+
+header img {
+  height: 120px;
+}
+/* HERO sección inicial (Inicio) */
+.hero {
+  position: relative;
+  background: url("RCP.jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.frase-inicial {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.frase-impacto {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+
+.btn-impacto {
+  background: #e63946;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  animation: latido 2s infinite;
+  transition: background 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.btn-impacto:hover {
+  background: #d62828;
+}
+
+/* Animaciones generales */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* QUIZ */
+.quiz-section {
+  background: #f8f9fa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.quiz-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+#pregunta {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn-opcion {
+  padding: 15px;
+  background-color: #457b9d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-opcion:hover {
+  background-color: #1d3557;
+}
+
+#timer {
+  margin-top: 25px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* MANOS QUE SALVAN - portada inicial */
+.hero-bg {
+  position: relative;
+  height: 100vh;
+  background: url('RCP.jpg') no-repeat center center/cover;
+  filter: blur(4px);
+}
+.hero-bg-manos {
+  position: relative;
+  height: 100vh;
+  background: url('rcp1.jpeg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.hero-bg-manos::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.4); /* oscurece un 40% */
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease forwards;
+}
+
+.hero-content a {
+  padding: 15px 30px;
+  background: #e53935;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.hero-content a:hover {
+  background: #b71c1c;
+}
+
+/* Información Empresa */
+.info-empresa {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  text-align: center;
+  background: #000;
+  padding: 60px 20px;
+  border-radius: 12px;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.info-empresa h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #ff5252; /* rojo suave */
+}
+
+.info-empresa p {
+  font-size: 1.3rem;
+  color: #fff;
+  line-height: 1.8;
+}
+
+/* Presentación Ernesto */
+.presentacion {
+  background: #f9f9f9;
+  padding: 60px 20px;
+}
+
+.presentacion-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.foto-ernesto {
+  width: 300px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.info-ernesto {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #333;
+  animation: fadeIn 1.5s ease forwards;
+  margin-top: -5px;
+}
+
+.info-ernesto h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #d32f2f;
+}
+
+/* Casos de éxito */
+.casos-exito {
+  background: #fff;
+  text-align: center;
+}
+
+.casos-exito h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #b71c1c;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.caso {
+  width: 280px;
+  background: #fefefe;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caso:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.caso img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.caso p {
+  padding: 15px;
+  font-size: 0.95rem;
+}
+
+/* Scroll margen para header fijo */
+#contenido {
+  scroll-margin-top: 80px;
+}
+/* Responsive - Celulares y tablets */
+@media (max-width: 768px) {
+  
+  header {
+    top: 10px;
+    left: 10px;
+  }
+
+  header img {
+    height: 70px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .frase-inicial {
+    font-size: 1.4rem;
+  }
+
+  .frase-impacto {
+    font-size: 1.6rem;
+  }
+
+  .btn-impacto {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content a {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  .info-empresa {
+    padding: 40px 15px;
+  }
+
+  .info-empresa h2 {
+    font-size: 1.8rem;
+  }
+
+  .info-empresa p {
+    font-size: 1.1rem;
+  }
+
+  .presentacion-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .foto-ernesto {
+    width: 80%;
+    max-width: 250px;
+  }
+
+  .info-ernesto h1 {
+    font-size: 1.8rem;
+  }
+
+  .info-ernesto p {
+    font-size: 1rem;
+  }
+
+  .casos-exito h2 {
+    font-size: 2rem;
+  }
+
+  .caso {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .caso p {
+    font-size: 1rem;
+  }
+
+  #pregunta {
+    font-size: 1.3rem;
+  }
+
+  .btn-opcion {
+    font-size: 0.95rem;
+  }
+
+}
+.caso.destacado {
+  background: #e53935;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caso.destacado img {
+  filter: brightness(0) invert(1);
+}
+
+.caso.destacado:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.caso.destacado {
+  background: #e53935;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+  font-size: 1.6rem; /* aumentamos el tamaño */
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+}
+
+.caso.destacado:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.destacados {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* Animación fade-in */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplicar animación a las tarjetas destacadas */
+.destacados .caso {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Para que aparezcan de a poco */
+.destacados .caso:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.destacados .caso:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.destacados .caso:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.contacto {
+  background: #fff5f5;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contacto h2 {
+  font-size: 2.5rem;
+  color: #e53935;
+  margin-bottom: 40px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e53935;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+.btn-enviar {
+  padding: 15px;
+  background: #e53935;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background: #b71c1c;
+}
+
+#mensaje-exito {
+  font-size: 1.8rem;
+  color: #e53935;
+  margin-top: 30px;
+  display: none;
+  animation: aparecer 1s forwards;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.redes {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.redes img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s;
+}
+
+.redes img:hover {
+  transform: scale(1.2);
+}
+.foto-ernesto-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.redes-ernesto {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.redes-ernesto img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.redes-ernesto img:hover {
+  transform: scale(1.2);
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de RCP - Ernesto Álvarez</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sección de impacto -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1 class="frase-inicial">Una tarde cualquiera. Unos mates, unas risas, un ser querido.</h1>
+      <h2 class="frase-impacto">De repente, se desploma frente a vos.<br>¿Cómo actuás sabiendo que su vida depende de vos?</h2>
+      <a onclick="scrollToQuiz()" class="btn-impacto">Ponete a prueba</a>
+    </div>
+  </section>
+
+  <!-- Sección de quiz -->
+  <section id="quiz" class="quiz-section" style="display: none;">
+    <div class="quiz-container">
+      <div id="intro-quiz">
+        <p>Este test es una simulación de una situación real. Vas a tener solo <strong>10 segundos</strong> para responder cada pregunta, tal como ocurre en una emergencia. No hay tiempo para dudar.</p>
+        <button onclick="iniciarQuiz()" class="btn-impacto">Comenzar Test</button>
+      </div>
+      <div id="bloque-preguntas" style="display: none;">
+        <div id="pregunta"></div>
+        <div id="opciones"></div>
+        <div id="timer">⏳ 10</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script para mostrar el quiz -->
+  <script>
+    function scrollToQuiz() {
+      const quiz = document.getElementById("quiz");
+      quiz.style.display = "block";
+      quiz.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+  <!-- Código del quiz -->
+  <script src="quiz.js"></script>
+</body>
+</html>
